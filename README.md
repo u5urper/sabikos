@@ -1,6 +1,6 @@
-# Minoca OS
+# Sabik OS
 
-Minoca OS is a general purpose operating system written from scratch. It aims to be lean, maintainable, modular, and compatible with existing software. It features a POSIX-like interface towards application software, and a growing suite of popular packages already built and ready to go. On the backend, it contains a powerful driver model between device drivers and the kernel. The driver model enables drivers to be written in a forward compatible manner, so that kernel level components can be upgraded without necessarily requiring a recompilation of all device drivers.
+Sabik OS is a general purpose operating system written from scratch. It aims to be lean, maintainable, modular, and compatible with existing software. It features a POSIX-like interface towards application software, and a growing suite of popular packages already built and ready to go. On the backend, it contains a powerful driver model between device drivers and the kernel. The driver model enables drivers to be written in a forward compatible manner, so that kernel level components can be upgraded without necessarily requiring a recompilation of all device drivers.
 
 Minoca OS is event driven, preemptible, SMP ready, and network capable. It currently runs on x86 PCs and a range of ARM boards.
 
@@ -12,7 +12,7 @@ Minoca OS is event driven, preemptible, SMP ready, and network capable. It curre
 ### Getting Started
 If you're just looking to try out Minoca OS, head over to our [download](https://www.minocacorp.com/download/) page to grab the latest stable images. The rest of this page describes how to use this repository to build your own custom image of Minoca OS.
 
-## Building Minoca OS
+## Building Sabik OS
 The paragraphs below will get you from a fresh clone to a built image.
 
 ### Environment
@@ -24,8 +24,8 @@ The Minoca OS build environment is keyed off of a few environment variables you'
  - `PATH` - You'll need to have `$SRCROOT/$ARCH$VARIANT$DEBUG/tools/bin` in your path to build successfully.
 
 ### Prerequisites
-To build Minoca OS you'll need a Minoca-specific toolchain for the particular architecture you're building. Prebuilt toolchains can be found [here](https://www.minocacorp.com/download/#toolchain). If you want to build the toolchain from sources, you'll need to check out the [third-party](https://gitlab.com/minoca/third-party) repository and run "make tools" in there.
-> Note: If you want to build your own toolchain on Windows, you may find the [tools](https://gitlab.com/minoca/tools) repository helpful, as it contains a native MinGW compiler, make, and other tools needed to bootstrap a toolchain on Windows.
+To build Sabik OS you'll need a Minoca-specific toolchain for the particular architecture you're building. Prebuilt toolchains can be found [here](https://www.sabikacorp.com/download/#toolchain). If you want to build the toolchain from sources, you'll need to check out the [third-party](https://gitlab.com/sabik/third-party) repository and run "make tools" in there.
+> Note: If you want to build your own toolchain on Windows, you may find the [tools](https://gitlab.com/sabik/tools) repository helpful, as it contains a native MinGW compiler, make, and other tools needed to bootstrap a toolchain on Windows.
 
 ### Build
 Run `make` to build the OS for the particular architecture you've supplied. Parallel make is supported. The final output of the build will be several .img files located in `$SRCROOT/$ARCH$VARIANT$DEBUG/bin/*.img`. For example, the PC image is usually located at `$SRCROOT/x86dbg/bin/pc.img`. This is a raw hard disk file that can be applied directly to a hard drive or USB stick to boot Minoca OS. The image `install.img` is a generic installation archive that the `msetup` tool can use to create new Minoca OS installations on target disks or partitions.
@@ -116,11 +116,11 @@ Submissions are welcome! See our [CONTRIBUTING.md](CONTRIBUTING.md) page for det
 Minoca OS is licensed to the public under the terms of the GNU General Public License, version 3. Alternate licensing options are available. Contact info@minocacorp.com if your company is interested in licensing Minoca OS. For complete licensing information, see the [LICENSE](LICENSE) file in this repository.
 
 ## Contact
- * Email: minoca-dev@googlegroups.com
-   * Contact security@minocacorp.com for security related issues.
-   * Contact info@minocacorp.com for private or business inquries.
- * Website: [http://www.minocacorp.com/](http://www.minocacorp.com)
- * Github: [https://github.com/minoca](https://github.com/minoca)
- * Gitlab: [https://gitlab.com/minoca](https://gitlab.com/minoca)
- * IRC: [ircs://irc.oftc.net:6697/minoca-os](ircs://irc.oftc.net:6697/minoca-os)
+ * Email: sabik-dev@googlegroups.com
+   * Contact security@sabik.com for security related issues.
+   * Contact info@sabik.com for private or business inquries.
+ * Website: [http://www.sabik.com/](http://www.sabik.com)
+ * Github: [https://github.com/sabik](https://github.com/sabik)
+ * Gitlab: [https://gitlab.com/sabik](https://gitlab.com/sabik)
+ * IRC: [ircs://irc.oftc.net:6697/sabik-os](ircs://irc.oftc.net:6697/sabik-os)
 
